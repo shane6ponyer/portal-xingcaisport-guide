@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>杏彩体育 – 站点介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background-color: #f7f9fc;
+      color: #1e293b;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .hero {
+      background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+      padding: 4rem 1.5rem 3.5rem;
+      text-align: center;
+      color: #e2e8f0;
+      border-bottom: 3px solid #3b82f6;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 0.75rem;
+      color: #ffffff;
+    }
+
+    .hero .sub {
+      font-size: 1.1rem;
+      opacity: 0.85;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin: 2.4rem 0 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid #d1d9e6;
+      color: #0f172a;
+    }
+
+    .section-title:first-of-type {
+      margin-top: 0.5rem;
+    }
+
+    .intro-text {
+      font-size: 1.05rem;
+      background: #ffffff;
+      padding: 1.6rem 1.8rem;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+      border-left: 5px solid #3b82f6;
+    }
+
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem;
+      margin: 1.6rem 0;
+    }
+
+    .highlight-card {
+      background: #ffffff;
+      padding: 1.4rem 1.2rem;
+      border-radius: 14px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+      transition: transform 0.15s ease, box-shadow 0.2s;
+      border: 1px solid #e9edf2;
+    }
+
+    .highlight-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(59, 130, 246, 0.06);
+      border-color: #b4c9e8;
+    }
+
+    .highlight-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #1e293b;
+      font-weight: 600;
+    }
+
+    .highlight-card p {
+      font-size: 0.95rem;
+      color: #475569;
+    }
+
+    .usage-list {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 1.6rem 1.8rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+      list-style: none;
+    }
+
+    .usage-list li {
+      padding: 0.5rem 0;
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      border-bottom: 1px solid #f0f3f7;
+    }
+
+    .usage-list li:last-child {
+      border-bottom: none;
+    }
+
+    .usage-list li::before {
+      content: "▹";
+      color: #3b82f6;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .faq-item {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+      border: 1px solid #eef2f7;
+    }
+
+    .faq-item strong {
+      display: block;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 0.3rem;
+      font-size: 1rem;
+    }
+
+    .faq-item p {
+      font-size: 0.95rem;
+      color: #475569;
+    }
+
+    .note-box {
+      background: #f0f5fe;
+      border-radius: 14px;
+      padding: 1.3rem 1.6rem;
+      margin: 2rem 0 1.8rem;
+      border-left: 5px solid #3b82f6;
+    }
+
+    .note-box p {
+      font-size: 0.98rem;
+      color: #1e293b;
+    }
+
+    a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+
+    a:hover {
+      color: #1e40af;
+      text-decoration: underline;
+    }
+
+    .footer-note {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+      font-size: 0.85rem;
+      color: #94a3b8;
+      border-top: 1px solid #e2e8f0;
+      margin-top: 2.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+      .hero .sub {
+        font-size: 1rem;
+      }
+      .intro-text {
+        padding: 1.2rem 1.2rem;
+      }
+      .highlight-card {
+        padding: 1rem;
+      }
+      .usage-list {
+        padding: 1.2rem;
+      }
+      .faq-item {
+        padding: 1rem 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <h1>杏彩体育 · 服务概览</h1>
+    <p class="sub">一份面向用户的站点介绍与使用说明</p>
+  </section>
+
+  <div class="container">
+
+    <div class="intro-text">
+      <p><strong>杏彩体育</strong> 是一个提供体育相关信息与内容聚合的平台。站点以简洁的界面和清晰的信息结构，帮助用户快速了解不同体育项目的基础知识、动态摘要及常见问题。如果你希望集中浏览体育资讯，这里可以作为你的一个信息来源。</p>
+    </div>
+
+    <!-- 亮点摘要 -->
+    <h2 class="section-title">内容亮点</h2>
+    <div class="highlights-grid">
+      <div class="highlight-card">
+        <h3>覆盖项目广</h3>
+        <p>从足球、篮球到网球、电子竞技，多个体育项目的基础介绍与动态均有涉及。</p>
+      </div>
+      <div class="highlight-card">
+        <h3>信息结构化</h3>
+        <p>页面采用卡片式布局，重点突出，方便按需浏览，不繁杂。</p>
+      </div>
+      <div class="highlight-card">
+        <h3>适合快速参考</h3>
+        <p>无论是入门爱好者还是想了解某项运动的基本规则，都可以快速找到要点。</p>
+      </div>
+      <div class="highlight-card">
+        <h3>持续整理中</h3>
+        <p>内容会依据体育赛事周期与用户反馈进行更新，保持一定时效性。</p>
+      </div>
+    </div>
+
+    <!-- 使用建议 -->
+    <h2 class="section-title">使用建议</h2>
+    <ul class="usage-list">
+      <li>浏览首页即可获取各大体育项目的摘要卡片，点击可展开更多细节。</li>
+      <li>如果你对某一特定运动感兴趣，建议直接通过站内导航进入对应专区。</li>
+      <li>页面加载速度较快，适合在移动端或网络环境一般的情况下使用。</li>
+      <li>若发现信息缺失或链接失效，可以通过站点提供的反馈渠道告知。</li>
+    </ul>
+
+    <!-- 可信说明 + 链接嵌入 -->
+    <div class="note-box">
+      <p>
+        本页面是对 <a href="https://portal-xingcaisport.com">杏彩体育</a> 的介绍性整理，所有内容均基于公开信息与站点实际呈现。我们建议你在使用前自行了解平台的详细服务条款与隐私政策，以做出符合自身需求的判断。
+      </p>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <h2 class="section-title">常见问题摘要</h2>
+
+    <div class="faq-item">
+      <strong>杏彩体育 是否需要注册才能浏览？</strong>
+      <p>大部分内容无需注册即可阅读。部分高级或个性化功能可能需要创建账号，具体以平台实际设置为准。</p>
+    </div>
+
+    <div class="faq-item">
+      <strong>信息更新频率如何？</strong>
+      <p>根据大型赛事与日常新闻动态不定期更新。重要赛程期间内容会相对密集，平时保持基础内容稳定。</p>
+    </div>
+
+    <div class="faq-item">
+      <strong>站内是否有广告或外部链接？</strong>
+      <p>页面可能出现少量非侵入式广告，用以维持运营。外部链接均带有明显标识，点击前可自行判断。</p>
+    </div>
+
+    <div class="faq-item">
+      <strong>我可以分享站内内容到社交平台吗？</strong>
+      <p>可以。分享功能默认开放，但请注明来源并避免对原文进行篡改或断章取义。</p>
+    </div>
+
+    <!-- 附加温馨提示 -->
+    <p style="margin-top: 2rem; font-size: 0.9rem; color: #64748b; text-align: center; border-top: 1px dashed #dce2ea; padding-top: 1.8rem;">
+      以上内容为概要说明，具体以 <a href="https://portal-xingcaisport.com">杏彩体育</a> 实际页面为准。如有疑问可参考站点帮助中心。
+    </p>
+
+  </div>
+
+  <div class="footer-note">
+    杏彩体育 · 介绍页 &nbsp;|&nbsp; 内容仅供参考
+  </div>
+
+</body>
+</html>
